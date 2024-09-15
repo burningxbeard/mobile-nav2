@@ -1,0 +1,407 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3b3b3b;
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #333;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Desktop nav-menu */
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Cool hover effects */
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -6px;
+    left: 0;
+    background-color: dodgerblue;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  .nav-link:hover {
+    color: #05f1f9;
+  }
+  
+  /* Mobile menu button (hamburger) */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 2rem;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.4s ease;
+  }
+  
+  /* Animation for turning hamburger to 'X' */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(10px,10px);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Middle bar disappears */
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  /* Overlay for blur effect */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+  }
+  
+  /* Main content */
+  .main-content {
+    transition: filter 0.3s ease; /* Smooth transition for blur */
+  }
+  
+  /* Mobile nav-menu */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      right: -100%;
+      top: 5rem;
+      bottom: 0; /* Ensures full height on mobile */
+      background-color: rgba(47, 59, 152, 0.9); /* Added opacity (90%) to mobile menu */
+      width: 100%;
+      flex-direction: column;
+      justify-content: start;
+      align-items: end;
+      transition: right 0.4s ease;
+      z-index: 10;
+      padding-top: 2rem;
+      padding-right: 1rem;
+    }
+  
+    .nav-menu.active {
+      right: 0;
+    }
+  
+    .nav-item {
+      margin: 20px 0;
+    }
+  
+    .nav-link {
+      font-size: 1.5rem;
+      color: white; /* Ensuring text stays fully visible */
+    }
+  
+    /* Show overlay when menu is active */
+    .overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    /* Blur only the main content when the menu is open */
+    .main-content.menu-open {
+      filter: blur(5px); /* Apply the blur to main content */
+    }
+  
+    /* iOS Safari fix: prevent scrolling when the menu is active */
+    body.menu-open {
+      overflow: hidden; /* Prevents background scrolling */
+    }
+  }
+  /* this is where the content CSS starts */
+  
+  /* Reset and base styles */
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navigation styles */
+  .navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-menu li {
+    margin: 0;
+  }
+  
+  .nav-menu a {
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* Mobile menu styles */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Hero section */
+  .hero {
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero-content {
+    max-width: 60rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px black;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .cta-button {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 30px;
+    border-radius: .5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #019c91;
+  }
+  
+  /* Services section */
+  .services {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust columns based on screen width */
+    gap: 20px;
+  }
+  
+  .service {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .service h3 {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .service-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+  }
+  
+  
+  /* Testimonials section */
+  .testimonials {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial p {
+    font-style: italic;
+  }
+  
+  .testimonial strong {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Contact section */
+  .contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #00d1b2;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #019c91;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  

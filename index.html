@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>StellarOne Design - Web Design &amp; Development - Cleveland, Ohio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><img src="assets/images/logo-placeholder.png" alt="stellarone logo"  width="280px"></div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Background overlay for blur effect -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main content to be blurred when menu is active -->
+  <div class="main-content" id="main-content">
+  
+      <!-- Hero Section -->
+      <header class="hero" id="home">
+          <div class="hero-content">
+              <h1>Empowering Local Businesses with Stunning Websites</h1>
+              <p>Your online presence starts here. We create customized web solutions for small businesses in your area.</p>
+              <a href="#contact" class="cta-button">Get a Free Quote</a>
+          </div>
+      </header>
+  
+      <!-- Services Section -->
+<section class="services" id="services">
+  <h2>Our Services</h2>
+  <div class="service-container">
+      <div class="service">
+          <h3>Custom Website Design</h3>
+          <p>We design bespoke websites that capture the essence of your business and engage your audience.</p>
+      </div>
+      <div class="service">
+          <h3>Responsive Design</h3>
+          <p>Our websites look great on any device, from desktops to smartphones, ensuring a seamless experience.</p>
+      </div>
+      <div class="service">
+          <h3>SEO Optimization</h3>
+          <p>Improve your search engine rankings and attract more local customers with our SEO strategies.</p>
+      </div>
+      <div class="service">
+          <h3>E-commerce Solutions</h3>
+          <p>Grow your online sales with our secure and user-friendly e-commerce platforms.</p>
+      </div>
+      <div class="service">
+          <h3>Maintenance & Support</h3>
+          <p>We offer ongoing support and maintenance to keep your website running smoothly.</p>
+      </div>
+      <div class="service">
+          <h3>Local SEO Services</h3>
+          <p>Enhance your visibility in local search results and attract more customers from your area.</p>
+      </div>
+  </div>
+</section>
+
+  
+      <!-- Testimonials Section -->
+      <section class="testimonials" id="testimonials">
+          <h2>What Our Clients Say</h2>
+          <div class="testimonial-container">
+              <div class="testimonial">
+                  <p>"The team at Local Web Dev Agency transformed our outdated website into a modern, user-friendly platform. Highly recommended!"</p>
+                  <p><strong>Jane Doe</strong>, Owner of Doe's Boutique</p>
+              </div>
+              <div class="testimonial">
+                  <p>"Excellent service and support. Our new website has significantly increased our online visibility and customer inquiries."</p>
+                  <p><strong>John Smith</strong>, Founder of Smith's Landscaping</p>
+              </div>
+              <div class="testimonial">
+                <p>"The team at Local Web Dev Agency transformed our outdated website into a modern, user-friendly platform. Highly recommended!"</p>
+                <p><strong>Jane Doe</strong>, Owner of Doe's Boutique</p>
+            </div>
+            <div class="testimonial">
+                <p>"Excellent service and support. Our new website has significantly increased our online visibility and customer inquiries."</p>
+                <p><strong>John Smith</strong>, Founder of Smith's Landscaping</p>
+            </div>
+          </div>
+      </section>
+  
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+          <h2>Contact Us</h2>
+          <form action="submit_form.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              
+              <button type="submit" class="cta-button">Send Message</button>
+          </form>
+      </section>
+  
+      <!-- Footer -->
+      <footer class="footer">
+          <p>&copy; 2024 Local Web Dev Agency. All rights reserved.</p>
+      </footer>
+  </div>
+      <!-- JavaScript -->
+      <script src="script.js"></script>
+  </body>
+  </html>
+

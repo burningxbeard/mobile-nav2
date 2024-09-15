@@ -1,0 +1,182 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    -webkit-overflow-scrolling: touch; /* Smoother scrolling on iOS */
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Desktop nav-menu */
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Cool hover effects */
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00d1b2;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  .nav-link:hover {
+    color: #00d1b2;
+  }
+  
+  /* Mobile menu button (hamburger) */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 20; /* Ensuring it stays on top */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Make sure the bars are visible */
+    margin: 5px 0;
+    transition: all 0.4s ease;
+  }
+  
+  /* Animation for turning hamburger to 'X' */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Middle bar disappears */
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Overlay for blur effect */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+  }
+  
+  /* Main content */
+  .main-content {
+    padding: 20px;
+    transition: filter 0.3s ease; /* Smooth transition for blur */
+  }
+  
+  /* Mobile nav-menu */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      right: -100%;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(51, 51, 51, 0.9); /* Added opacity (90%) to mobile menu */
+      width: 250px;
+      flex-direction: column;
+      justify-content: flex-start; /* Align the menu items at the top */
+      align-items: center;
+      transition: right 0.4s ease;
+      z-index: 10;
+      overflow-y: auto; /* Enable vertical scrolling */
+    }
+  
+    .nav-menu.active {
+      right: 0;
+    }
+  
+    .nav-item {
+      margin: 20px 0;
+    }
+  
+    .nav-link {
+      font-size: 1.5rem;
+      color: white; /* Ensuring text stays fully visible */
+    }
+  
+    /* Show overlay when menu is active */
+    .overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    /* Blur only the main content when the menu is open */
+    .main-content.menu-open {
+      filter: blur(5px); /* Apply the blur to main content */
+    }
+  
+    /* Prevent background scroll when menu is open */
+    body.menu-open {
+      overflow: hidden; /* Prevents background scrolling */
+    }
+  }
+  
