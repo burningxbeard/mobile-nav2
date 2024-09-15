@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c; /* Dark background for the page */
+    color: #f0f0f0; /* Light text for readability */
+    padding: 50px;
+}
+
+/* Headings */
+h2, h3 {
+    color: #ffffff;
+}
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff; /* Light heading for contrast */
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Pricing Card */
+.pricing-card {
+    background-color: #2b2b2b; /* Dark background for the card */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Darker shadow */
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    color: #f0f0f0;
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #0072ff; /* Accent color */
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #bbbbbb; /* Lighter gray for contrast */
+}
+
+.pricing-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: #0072ff;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.pricing-card .btn:hover {
+    background-color: #005bb5;
+}
+
+/* Highlight the Popular Plan */
+.popular {
+    background-color: #0072ff;
+    color: white;
+    transform: scale(1.05);
+}
+
+.popular h3, .popular .price, .popular ul li, .popular .btn {
+    color: white;
+}
+
+.popular .btn {
+    background-color: white;
+    color: #0072ff;
+}
+
+.popular .btn:hover {
+    background-color: #f4f4f4;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 25px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1a1a1a; /* Dark background for testimonials */
+    margin-top: 50px;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #2b2b2b; /* Dark background for testimonial cards */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #0072ff; /* Accent border */
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    font-style: italic;
+    color: #cccccc; /* Light gray for readability */
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-container,
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card,
+    .testimonial-card {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,246 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Pricing Card */
+.pricing-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #0072ff;
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+.pricing-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: #0072ff;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.pricing-card .btn:hover {
+    background-color: #005bb5;
+}
+
+/* Highlight the Popular Plan */
+.popular {
+    background-color: #0072ff;
+    color: white;
+    transform: scale(1.05);
+}
+
+.popular h3, .popular .price, .popular ul li, .popular .btn {
+    color: white;
+}
+
+.popular .btn {
+    background-color: white;
+    color: #0072ff;
+}
+
+.popular .btn:hover {
+    background-color: #f4f4f4;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    background-color: #ff4757;
+    color: white;
+    padding: 10px 10px;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        margin-bottom: 30px;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        margin-bottom: 30px;
+    }
+}
+/* Styling for Testimonial Image */
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #0072ff; /* Optional: border around the image */
+}
+
+/* Other Testimonial Styles */
+.testimonials-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        margin-bottom: 30px;
+    }
+}
