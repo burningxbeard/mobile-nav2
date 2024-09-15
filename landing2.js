@@ -1,24 +1,22 @@
-// Theme Toggle Functionality
-const themeToggleIcon = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
 
-document.body.classList.add(`${currentTheme}-mode`);
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
+}
 
-themeToggleIcon.addEventListener('click', () => {
-    const isDarkMode = document.body.classList.contains('dark-mode');
-
-    if (isDarkMode) {
+themeToggle.addEventListener('click', () => {
+    if (document.body.classList.contains('dark-mode')) {
         document.body.classList.remove('dark-mode');
-        document.body.classList.add('light-mode');
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('theme', 'light-mode');
     } else {
-        document.body.classList.remove('light-mode');
         document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('theme', 'dark-mode');
     }
 });
 
-// Mobile Menu Toggle Functionality
+// Mobile Menu Toggle
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const closeMenu = document.getElementById('close-menu');

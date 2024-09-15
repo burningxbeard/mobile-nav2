@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="style-3.css">
+  <script defer src="script-3.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="light-mode">
+  
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">MySite</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <i class="fas fa-moon" id="dark-mode-toggle" title="Toggle Dark Mode"></i>
+      <i class="fas fa-bars" id="mobile-toggle" title="Menu"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Landing Page</h1>
+      <p>We offer the best services to boost your business.</p>
+      <button>Get Started</button>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Our Pricing</h2>
+    <div class="pricing-table">
+      <!-- Pricing Card 1 -->
+      <div class="pricing-card">
+        <h3>Basic Plan</h3>
+        <p class="price">$19.99/month</p>
+        <ul>
+          <li>10 Projects</li>
+          <li>5 GB Storage</li>
+          <li>Email Support</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+  
+      <!-- Pricing Card 2 (Featured) -->
+      <div class="pricing-card featured">
+        <h3>Pro Plan</h3>
+        <p class="price">$49.99/month</p>
+        <ul>
+          <li>Unlimited Projects</li>
+          <li>50 GB Storage</li>
+          <li>Priority Support</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+  
+      <!-- Pricing Card 3 -->
+      <div class="pricing-card">
+        <h3>Enterprise Plan</h3>
+        <p class="price">$99.99/month</p>
+        <ul>
+          <li>Unlimited Projects</li>
+          <li>200 GB Storage</li>
+          <li>24/7 Support</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Information</h3>
+        <p>1234 Street Name<br>City, State, 12345</p>
+        <p>Email: <a href="mailto:info@mysite.com">info@mysite.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MySite. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
